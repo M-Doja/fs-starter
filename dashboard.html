@@ -1,0 +1,19 @@
+<h1>Dashboard</h1>
+
+<p>{{profile.name}}</p>
+
+<input ng-model="profile.name"/>
+
+<button ng-click="update()">Update Profile</button>
+<button ng-click="logout()">Logout</button><br><br><br>
+
+<input ng-model="thing.name" placeholder="name"/>
+<input ng-model="thing.age" placeholder="age"/>
+<input ng-model="thing.location" placeholder="location"/>
+<button ng-click="addThing()">Add Thing</button>
+<div ng-repeat="thing in things">
+	{{thing.name}}
+	{{thing.age}}
+	{{thing.location}}
+	<button ng-click="removeThing(thing)">Destroy</button>
+</div>
